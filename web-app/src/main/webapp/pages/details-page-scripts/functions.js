@@ -82,19 +82,19 @@ function displayAlerts(wsEndpoint) {
 }
 
 //update the card details
-function updateStatusCards(sincetext, temperature, humidity, windDir, windSpeed) {
+function updateStatusCards(sincetext, varOne, varTwo, varThree, varFour) {
 
     //temperature status
-    $("#temperature").html(precise_round(temperature, 3) + "&#8451");
+    $("#card1").html(precise_round(varOne,3) + units1);
 
     //humidity status
-    $("#humidity").html(humidity + "<b>%</b>");
+    $("#card2").html(varTwo + units2);
 
     //wind status
-    $("#wind_status").html(windDir + "&#176");
+    $("#card3").html(varThree + units3);
 
     //wind speed
-    $("#windspeed_status").html(precise_round(windSpeed, 3) + "<b> mph</b>");
+    $("#card4").html(precise_round(varFour, 3) + units4);
 
 }
 

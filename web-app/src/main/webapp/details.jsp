@@ -215,8 +215,73 @@
 <script src="pages/details-page-scripts/functions.js"></script>
 <script src="pages/details-page-scripts/cssFunctions.js"></script>
 <script type="text/javascript">
-    var deviceType="weatherstation";
     var lastKnown = {};
+
+    var deviceType="weatherstation";
+
+    var typeParameter1="tempf";
+    var displayName1="Temperature";
+    var units1="&#8451";
+
+    var typeParameter2="humidity";
+    var displayName2="Humidity";
+    var units2="%";
+
+    var typeParameter3="winddir";
+    var displayName3="Wind Direction";
+    var units3="&#176";
+
+    var typeParameter4="dewptf";
+    var displayName4="Dew Point";
+    var units4="&#8451";
+
+    var typeParameter5="windspeedmph";
+    var displayName5="Wind Speed";
+    var units5="<Strong> mph</Strong>";
+
+    var typeParameter6="rainin";
+    var displayName6="Raining";
+    var units6="&#176";
+
+    var typeParameter7="solarradiation";
+    var displayName7="Solar Radiation";
+    var units7="<Strong> mmpH</Strong>";
+
+    var typeParameter8="UV";
+    var displayName8="Ultra Violet";
+    var units8="<Strong> milliwatts</Strong>";
+
+    var typeParameter9="baromin";
+    var displayName9="Baromin";
+    var units9="<Strong> pascal</Strong>";
+
+    document.getElementById("title1").innerHTML = displayName1+ units1;
+    document.getElementById("title2").innerHTML = displayName2+ units2;
+    document.getElementById("title3").innerHTML = displayName3+ units3;
+    document.getElementById("title4").innerHTML = displayName4+ units4;
+    document.getElementById("title5").innerHTML = displayName5+ units5;
+    document.getElementById("title6").innerHTML = displayName6+ units6;
+    document.getElementById("title7").innerHTML = displayName7+ units7;
+    document.getElementById("title8").innerHTML = displayName8+ units8;
+    document.getElementById("title9").innerHTML = displayName9+ units9;
+
+    document.getElementById("Htitle1").innerHTML = displayName1+ units1;
+    document.getElementById("Htitle2").innerHTML = displayName2+ units2;
+    document.getElementById("Htitle3").innerHTML = displayName3+ units3;
+    document.getElementById("Htitle4").innerHTML = displayName4+ units4;
+    document.getElementById("Htitle5").innerHTML = displayName5+ units5;
+    document.getElementById("Htitle6").innerHTML = displayName6+ units6;
+    document.getElementById("Htitle7").innerHTML = displayName7+ units7;
+    document.getElementById("Htitle8").innerHTML = displayName8+ units8;
+    document.getElementById("Htitle9").innerHTML = displayName9+ units9;
+
+    document.getElementById("cardtitle1").innerHTML = displayName1;
+    document.getElementById("cardtitle2").innerHTML = displayName2;
+    document.getElementById("cardtitle3").innerHTML = displayName3;
+    document.getElementById("cardtitle4").innerHTML = displayName4;
+
+
+
 
     $(document).ready(function () {
         $(document).ready(function () {
@@ -252,28 +317,26 @@
         if (record) {
             lastKnown = record;
             var sinceText = timeDifference(new Date(), new Date(record.timestamp), false) + " ago";
-            var temperature = record.values.tempf;
-            temperature = ((temperature - 32) * 5) / 9;
-            var humidity = record.values.humidity;
-            var windDir = record.values.winddir;
-            var windSpeed = record.values.windspeedmph;
-            updateStatusCards(sinceText, temperature, humidity, windDir, windSpeed);
+            var varOne = record.values[typeParameter1];
+            var varTwo = record.values[typeParameter2];
+            var varThree = record.values[typeParameter3];
+            var varFour = record.values[typeParameter4];
+            updateStatusCards(sinceText, varOne, varTwo, varThree, varFour);
         } else {
-            //temperature status
-            $("#temperature").html("Unknown");
-            $("#temperature_status_alert").parent().remove();
+            //card1 status
+            $("#card1").html("Unknown");
+            $("#card1_alert").parent().remove();
+            //card2 status
+            $("#card2").html("Unknown");
+            $("#card2_alert").parent().remove();
+            //card3 status
+            $("#card3").html("Unknown");
+            $("#card3_alert").parent().remove();
+            //card4 status
+            $("#card4").html("Unknown");
+            $("#card4_alert").parent().remove();
 
-            //humidity status
-            $("#humidity").html("Unknown");
-            $("#humidity_status_alert").parent().remove();
 
-            //wind direction status
-            $("#wind_status").html("Unknown");
-            $("#wind_status_alert").parent().remove();
-
-            //wind speeed status
-            $("#windspeed_status").html("Unknown");
-            $("#windspeed_status_alert").parent().remove();
         }
     };
     $.ajax({

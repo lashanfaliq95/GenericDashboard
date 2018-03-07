@@ -18,23 +18,23 @@
 
 realtimeAnalytics = {
     initDashboardPageCharts: function (wsEndpoint) {
-        /* ----------==========     Realtime Temperature Chart initialization    ==========---------- */
-        var realtimeTempLabelRef = [new Date()];
-        var realtimeTempLabel = ['0s'];
-        var realtimeTempSeries = [0];
+        /* ----------==========     Realtime Chart One initialization    ==========---------- */
+        var realtimeChartOneLabelRef = [new Date()];
+        var realtimeChartOneLabel = ['0s'];
+        var realtimeChartOneSeries = [0];
 
-         realtimeAnalytics.createLiFo(realtimeTempLabelRef, 10);
-         realtimeAnalytics.createLiFo(realtimeTempLabel, 10);
-         realtimeAnalytics.createLiFo(realtimeTempSeries, 10);
+         realtimeAnalytics.createLiFo(realtimeChartOneLabelRef, 10);
+         realtimeAnalytics.createLiFo(realtimeChartOneLabel, 10);
+         realtimeAnalytics.createLiFo(realtimeChartOneSeries, 10);
 
-        dataRealtimeTempChart = {
-            labels: realtimeTempLabel,
+        dataRealtimeChartOneChart = {
+            labels: realtimeChartOneLabel,
             series: [
-                realtimeTempSeries
+                realtimeChartOneSeries
             ]
         };
 
-        optionsRealtimeTempChart = {
+        optionsRealtimeChartOneChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -54,26 +54,26 @@ realtimeAnalytics = {
 
         };
 
-        var realtimeTemp = new Chartist.Line('#RealTimeTempChart', dataRealtimeTempChart, optionsRealtimeTempChart);
-        md.startAnimationForLineChart(realtimeTemp);
+        var realtimeChartOne = new Chartist.Line('#RealTimeChartOne', dataRealtimeChartOneChart, optionsRealtimeChartOneChart);
+        md.startAnimationForLineChart(realtimeChartOne);
 
-        /* ----------==========     Realtime Humidity Chart initialization    ==========---------- */
-        var realtimeHumidLabelRef = [new Date()];
-        var realtimeHumidLabel = ['0s'];
-        var realtimeHumidSeries = [0];
+        /* ----------==========     Realtime Chart Two initialization    ==========---------- */
+        var realtimeChartTwoLabelRef = [new Date()];
+        var realtimeChartTwoLabel = ['0s'];
+        var realtimeChartTwoSeries = [0];
 
-        realtimeAnalytics.createLiFo(realtimeHumidLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimeHumidLabel, 10);
-        realtimeAnalytics.createLiFo(realtimeHumidSeries, 10);
+        realtimeAnalytics.createLiFo(realtimeChartTwoLabelRef, 10);
+        realtimeAnalytics.createLiFo(realtimeChartTwoLabel, 10);
+        realtimeAnalytics.createLiFo(realtimeChartTwoSeries, 10);
 
-        dataRealtimeHumidChart = {
-            labels: realtimeHumidLabel,
+        dataRealtimeChartTwoChart = {
+            labels: realtimeChartTwoLabel,
             series: [
-                realtimeHumidSeries
+                realtimeChartTwoSeries
             ]
         };
 
-        optionsRealtimeHumidChart = {
+        optionsRealtimeChartTwoChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -88,26 +88,26 @@ realtimeAnalytics = {
             }
         };
 
-        var realtimeHumid = new Chartist.Line('#RealTimeHumidityChart', dataRealtimeHumidChart, optionsRealtimeHumidChart);
-        md.startAnimationForLineChart(realtimeHumid);
+        var realtimeChartTwo = new Chartist.Line('#RealTimeChartTwo', dataRealtimeChartTwoChart, optionsRealtimeChartTwoChart);
+        md.startAnimationForLineChart(realtimeChartTwo);
 
-        /* ----------==========     Realtime wind direction Chart initialization    ==========---------- */
-        var realtimeWindDirLabelRef = [new Date()];
-        var realtimeWindDirLabel = ['0s'];
-        var realtimeWindDirSeries = [0];
+        /* ----------==========     Realtime Chart Three initialization    ==========---------- */
+        var realtimeChartThreeLabelRef = [new Date()];
+        var realtimeChartThreeLabel = ['0s'];
+        var realtimeChartThreeSeries = [0];
 
-        realtimeAnalytics.createLiFo(realtimeWindDirLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimeWindDirLabel, 10);
-        realtimeAnalytics.createLiFo(realtimeWindDirSeries, 10);
+        realtimeAnalytics.createLiFo(realtimeChartThreeLabelRef, 10);
+        realtimeAnalytics.createLiFo(realtimeChartThreeLabel, 10);
+        realtimeAnalytics.createLiFo(realtimeChartThreeSeries, 10);
 
-        dataRealtimeWindDirChart = {
-            labels: realtimeWindDirLabel,
+        dataRealtimeChartThreeChart = {
+            labels: realtimeChartThreeLabel,
             series: [
-                realtimeWindDirSeries
+                realtimeChartThreeSeries
             ]
         };
 
-        optionsRealtimeWindDirChart = {
+        optionsRealtimeChartThreeChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -122,35 +122,26 @@ realtimeAnalytics = {
             }
         };
 
-        var realtimeWindDir = new Chartist.Line('#RealTimeWindDirChart', dataRealtimeWindDirChart, optionsRealtimeWindDirChart);
-        md.startAnimationForLineChart(realtimeWindDir);
-        // dataRealtimeWindDirChart={series: [-340]};
-        // optionsRealtimeWindDirChart={
-        //     donut: true,
-        //     donutWidth: 60,
-        //     startAngle: 0,
-        //     total: 360,
-        //     showLabel: true
-        // };
-        // new Chartist.Pie('#RealTimeWindDirChart',dataRealtimeWindDirChart,optionsRealtimeWindDirChart );
+        var realtimeChartThree = new Chartist.Line('#RealTimeChartThree', dataRealtimeChartThreeChart, optionsRealtimeChartThreeChart);
+        md.startAnimationForLineChart(realtimeChartThree);
 
-        /* ----------==========     Realtime dew point forecast Chart initialization    ==========---------- */
-        var realtimedewptfLabelRef = [new Date()];
-        var realtimedewptfLabel = ['0s'];
-        var realtimedewptfSeries = [0];
+        /* ----------==========     Realtime Chart Four initialization    ==========---------- */
+        var realtimeChartFourLabelRef = [new Date()];
+        var realtimeChartFourLabel = ['0s'];
+        var realtimeChartFourSeries = [0];
 
-        realtimeAnalytics.createLiFo(realtimedewptfLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimedewptfLabel, 10);
-        realtimeAnalytics.createLiFo(realtimedewptfSeries, 10);
+        realtimeAnalytics.createLiFo(realtimeChartFourLabelRef, 10);
+        realtimeAnalytics.createLiFo(realtimeChartFourLabel, 10);
+        realtimeAnalytics.createLiFo(realtimeChartFourSeries, 10);
 
-        dataRealtimedewptfChart = {
-            labels: realtimedewptfLabel,
+        dataRealtimeChartFourChart = {
+            labels: realtimeChartFourLabel,
             series: [
-                realtimedewptfSeries
+                realtimeChartFourSeries
             ]
         };
 
-        optionsRealtimedewptfChart = {
+        optionsRealtimeChartFourChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -165,26 +156,26 @@ realtimeAnalytics = {
             }
         };
 
-        var realtimedewptf = new Chartist.Line('#RealTimeDewPointChart', dataRealtimedewptfChart, optionsRealtimedewptfChart);
-        md.startAnimationForLineChart(realtimedewptf);
+        var realtimeChartFour = new Chartist.Line('#RealTimeChartFour', dataRealtimeChartFourChart, optionsRealtimeChartFourChart);
+        md.startAnimationForLineChart(realtimeChartFour);
 
-        /* ----------==========     Realtime wind chill Chart initialization    ==========---------- */
-        var realtimewindchillfLabelRef = [new Date()];
-        var realtimewindchillfLabel = ['0s'];
-        var realtimewindchillfSeries = [0];
+        /* ----------==========     Realtime Chart Five initialization    ==========---------- */
+        var realtimewChartFiveLabelRef = [new Date()];
+        var realtimewChartFiveLabel = ['0s'];
+        var realtimewChartFiveSeries = [0];
 
-        realtimeAnalytics.createLiFo(realtimewindchillfLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimewindchillfLabel, 10);
-        realtimeAnalytics.createLiFo(realtimewindchillfSeries, 10);
+        realtimeAnalytics.createLiFo(realtimewChartFiveLabelRef, 10);
+        realtimeAnalytics.createLiFo(realtimewChartFiveLabel, 10);
+        realtimeAnalytics.createLiFo(realtimewChartFiveSeries, 10);
 
-        dataRealtimewindchillfChart = {
-            labels: realtimewindchillfLabel,
+        dataRealtimewChartFiveChart = {
+            labels: realtimewChartFiveLabel,
             series: [
-                realtimewindchillfSeries
+                realtimewChartFiveSeries
             ]
         };
 
-        optionsRealtimewindchillfChart = {
+        optionsRealtimewChartFiveChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -199,26 +190,26 @@ realtimeAnalytics = {
             }
         };
 
-        var realtimewindchillf = new Chartist.Line('#RealTimeWindChillChart', dataRealtimewindchillfChart, optionsRealtimewindchillfChart);
-        md.startAnimationForLineChart(realtimewindchillf);
+        var realtimeChartFive = new Chartist.Line('#RealTimeChartFive', dataRealtimewChartFiveChart, optionsRealtimewChartFiveChart);
+        md.startAnimationForLineChart(realtimeChartFive);
 
-        /* ----------==========     Realtime wind speed Chart initialization    ==========---------- */
-        var realtimewindspeedmphLabelRef = [new Date()];
-        var realtimewindspeedmphLabel = ['0s'];
-        var realtimewindspeedmphSeries = [0];
+        /* ----------==========     Realtime Chart Six initialization    ==========---------- */
+        var realtimeChartSixLabelRef = [new Date()];
+        var realtimeChartSixLabel = ['0s'];
+        var realtimeChartSixSeries = [0];
 
-        realtimeAnalytics.createLiFo(realtimewindspeedmphLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimewindspeedmphLabel, 10);
-        realtimeAnalytics.createLiFo(realtimewindspeedmphSeries, 10);
+        realtimeAnalytics.createLiFo(realtimeChartSixLabelRef, 10);
+        realtimeAnalytics.createLiFo(realtimeChartSixLabel, 10);
+        realtimeAnalytics.createLiFo(realtimeChartSixSeries, 10);
 
-        dataRealtimewindspeedmphChart = {
-            labels: realtimewindspeedmphLabel,
+        dataRealtimeChartSixChart = {
+            labels: realtimeChartSixLabel,
             series: [
-                realtimewindspeedmphSeries
+                realtimeChartSixSeries
             ]
         };
 
-        optionsRealtimewindspeedmphChart = {
+        optionsRealtimeChartSixChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -233,26 +224,26 @@ realtimeAnalytics = {
             }
         };
 
-        var realtimewindspeedmph = new Chartist.Line('#RealTimeWindSpeedChart', dataRealtimewindspeedmphChart, optionsRealtimewindspeedmphChart);
-        md.startAnimationForLineChart(realtimewindspeedmph);
+        var realtimeChartSix = new Chartist.Line('#RealTimeChartSix', dataRealtimeChartSixChart, optionsRealtimeChartSixChart);
+        md.startAnimationForLineChart(realtimeChartSix);
 
-        /* ----------==========     Realtime wind gust Chart initialization    ==========---------- */
-        var realtimewindgustmphLabelRef = [new Date()];
-        var realtimewindgustmphLabel = ['0s'];
-        var realtimewindgustmphSeries = [0];
+        /* ----------==========     Realtime Chart Seven initialization    ==========---------- */
+        var realtimeChartSevenLabelRef = [new Date()];
+        var realtimeChartSevenLabel = ['0s'];
+        var realtimeChartSevenSeries = [0];
 
-        realtimeAnalytics.createLiFo(realtimewindgustmphLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimewindgustmphLabel, 10);
-        realtimeAnalytics.createLiFo(realtimewindgustmphSeries, 10);
+        realtimeAnalytics.createLiFo(realtimeChartSevenLabelRef, 10);
+        realtimeAnalytics.createLiFo(realtimeChartSevenLabel, 10);
+        realtimeAnalytics.createLiFo(realtimeChartSevenSeries, 10);
 
-        dataRealtimewindgustmphChart = {
-            labels: realtimewindgustmphLabel,
+        dataRealtimeChartSevenChart = {
+            labels: realtimeChartSevenLabel,
             series: [
-                realtimewindgustmphSeries
+                realtimeChartSevenSeries
             ]
         };
 
-        optionsRealtimewindgustmphChart = {
+        optionsRealtimeChartSevenChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -267,26 +258,26 @@ realtimeAnalytics = {
             }
         };
 
-        var realtimewindgustmph= new Chartist.Line('#RealTimeWindGustChart', dataRealtimewindgustmphChart, optionsRealtimewindgustmphChart);
-        md.startAnimationForLineChart(realtimewindgustmph);
+        var realtimeChartSeven= new Chartist.Line('#RealTimeChartSeven', dataRealtimeChartSevenChart, optionsRealtimeChartSevenChart);
+        md.startAnimationForLineChart(realtimeChartSeven);
 
-        /* ----------==========     Realtime raining Chart initialization    ==========---------- */
-        var realtimerainingLabelRef = [new Date()];
-        var realtimerainingLabel = ['0s'];
-        var realtimerainingSeries = [0];
+        /* ----------==========     Realtime Chart Eight initialization    ==========---------- */
+        var realtimeChartEightLabelRef = [new Date()];
+        var realtimeChartEightLabel = ['0s'];
+        var realtimeChartEightSeries = [0];
 
-        realtimeAnalytics.createLiFo(realtimerainingLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimerainingLabel, 10);
-        realtimeAnalytics.createLiFo(realtimerainingSeries, 10);
+        realtimeAnalytics.createLiFo(realtimeChartEightLabelRef, 10);
+        realtimeAnalytics.createLiFo(realtimeChartEightLabel, 10);
+        realtimeAnalytics.createLiFo(realtimeChartEightSeries, 10);
 
-        dataRealtimerainingChart = {
-            labels: realtimerainingLabel,
+        dataRealtimeChartEightChart = {
+            labels: realtimeChartEightLabel,
             series: [
-                realtimerainingSeries
+                realtimeChartEightSeries
             ]
         };
 
-        optionsRealtimerainingChart = {
+        optionsRealtimeChartEightChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -301,26 +292,26 @@ realtimeAnalytics = {
             }
         };
 
-        var realtimeraining= new Chartist.Line('#RealTimeRainingChart', dataRealtimerainingChart, optionsRealtimerainingChart);
-        md.startAnimationForLineChart(realtimeraining);
+        var realtimeChartEight= new Chartist.Line('#RealTimeChartEight', dataRealtimeChartEightChart, optionsRealtimeChartEightChart);
+        md.startAnimationForLineChart(realtimeChartEight);
 
-        /* ----------==========     Realtime daily raining Chart initialization    ==========---------- */
-        var realtimedailyrainingLabelRef = [new Date()];
-        var realtimedailyrainingLabel = ['0s'];
-        var realtimedailyrainingSeries = [0];
+        /* ----------==========     Realtime Chart nine initialization    ==========---------- */
+        var realtimeChartNineLabelRef = [new Date()];
+        var realtimeChartNineLabel = ['0s'];
+        var realtimeChartNineSeries = [0];
 
-        realtimeAnalytics.createLiFo(realtimedailyrainingLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimedailyrainingLabel, 10);
-        realtimeAnalytics.createLiFo(realtimedailyrainingSeries, 10);
+        realtimeAnalytics.createLiFo(realtimeChartNineLabelRef, 10);
+        realtimeAnalytics.createLiFo(realtimeChartNineLabel, 10);
+        realtimeAnalytics.createLiFo(realtimeChartNineSeries, 10);
 
-        dataRealtimedailyrainingChart = {
-            labels: realtimedailyrainingLabel,
+        dataRealtimeChartNineChart = {
+            labels: realtimeChartNineLabel,
             series: [
-                realtimedailyrainingSeries
+                realtimeChartNineSeries
             ]
         };
 
-        optionsRealtimedailyrainingChart = {
+        optionsRealtimeChartNineChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
                 tension: 0
             }),
@@ -335,281 +326,10 @@ realtimeAnalytics = {
             }
         };
 
-        var realtimedailyraining= new Chartist.Line('#RealTimeDailyRainingChart', dataRealtimedailyrainingChart, optionsRealtimedailyrainingChart);
-        md.startAnimationForLineChart(realtimedailyraining);
-
-        /* ----------==========     Realtime weekly raining Chart initialization    ==========---------- */
-        var realtimeweeklyrainingLabelRef = [new Date()];
-        var realtimeweeklyrainingLabel = ['0s'];
-        var realtimeweeklyrainingSeries = [0];
-
-        realtimeAnalytics.createLiFo(realtimeweeklyrainingLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimeweeklyrainingLabel, 10);
-        realtimeAnalytics.createLiFo(realtimeweeklyrainingSeries, 10);
-
-        dataRealtimeweeklyrainingChart = {
-            labels: realtimeweeklyrainingLabel,
-            series: [
-                realtimeweeklyrainingSeries
-            ]
-        };
-
-        optionsRealtimeweeklyrainingChart = {
-            lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
-            }),
-            showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-            chartPadding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            }
-        };
-
-        var realtimeweeklyraining= new Chartist.Line('#RealTimeWeeklyRainingChart', dataRealtimeweeklyrainingChart, optionsRealtimeweeklyrainingChart);
-        md.startAnimationForLineChart(realtimeweeklyraining);
-
-        /* ----------==========     Realtime monthly raining Chart initialization    ==========---------- */
-        var realtimemonthlyrainingLabelRef = [new Date()];
-        var realtimemonthlyrainingLabel = ['0s'];
-        var realtimemonthlyrainingSeries = [0];
-
-        realtimeAnalytics.createLiFo(realtimemonthlyrainingLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimemonthlyrainingLabel, 10);
-        realtimeAnalytics.createLiFo(realtimemonthlyrainingSeries, 10);
-
-        dataRealtimemonthlyrainingChart = {
-            labels: realtimemonthlyrainingLabel,
-            series: [
-                realtimemonthlyrainingSeries
-            ]
-        };
-
-        optionsRealtimemonthlyrainingChart = {
-            lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
-            }),
-            showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-            chartPadding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            }
-        };
-
-        var realtimemonthlyraining= new Chartist.Line('#RealTimeMonthlyRainingChart', dataRealtimemonthlyrainingChart, optionsRealtimemonthlyrainingChart);
-        md.startAnimationForLineChart(realtimemonthlyraining);
+        var realtimeChartNine= new Chartist.Line('#RealTimeChartNine', dataRealtimeChartNineChart, optionsRealtimeChartNineChart);
+        md.startAnimationForLineChart(realtimeChartNine);
 
 
-        /* ----------==========     Realtime yearly raining Chart initialization    ==========---------- */
-        var realtimeyearlyrainingLabelRef = [new Date()];
-        var realtimeyearlyrainingLabel = ['0s'];
-        var realtimeyearlyrainingSeries = [0];
-
-        realtimeAnalytics.createLiFo(realtimeyearlyrainingLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimeyearlyrainingLabel, 10);
-        realtimeAnalytics.createLiFo(realtimeyearlyrainingSeries, 10);
-
-        dataRealtimeyearlyrainingChart = {
-            labels: realtimeyearlyrainingLabel,
-            series: [
-                realtimeyearlyrainingSeries
-            ]
-        };
-
-        optionsRealtimeyearlyrainingChart = {
-            lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
-            }),
-            showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-            chartPadding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            }
-        };
-
-        var realtimeyearlyraining= new Chartist.Line('#RealTimeYearlyRainingChart', dataRealtimeyearlyrainingChart, optionsRealtimeyearlyrainingChart);
-        md.startAnimationForLineChart(realtimeyearlyraining);
-
-        /* ----------==========     Realtime solar radiation Chart initialization    ==========---------- */
-        var realtimesolarradiationLabelRef = [new Date()];
-        var realtimesolarradiationLabel = ['0s'];
-        var realtimesolarradiationSeries = [0];
-
-        realtimeAnalytics.createLiFo(realtimesolarradiationLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimesolarradiationLabel, 10);
-        realtimeAnalytics.createLiFo(realtimesolarradiationSeries, 10);
-
-        dataRealtimesolarradiationChart = {
-            labels: realtimesolarradiationLabel,
-            series: [
-                realtimesolarradiationSeries
-            ]
-        };
-
-        optionsRealtimesolarradiationChart = {
-            lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
-            }),
-            showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-            chartPadding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            }
-        };
-
-        var realtimesolarradiation= new Chartist.Line('#RealTimeSolarRadiationChart', dataRealtimesolarradiationChart, optionsRealtimesolarradiationChart);
-        md.startAnimationForLineChart(realtimesolarradiation);
-
-        /* ----------==========     Realtime UV Chart initialization    ==========---------- */
-        var realtimeuvLabelRef = [new Date()];
-        var realtimeuvLabel = ['0s'];
-        var realtimeuvSeries = [0];
-
-        realtimeAnalytics.createLiFo(realtimeuvLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimeuvLabel, 10);
-        realtimeAnalytics.createLiFo(realtimeuvSeries, 10);
-
-        dataRealtimeuvChart = {
-            labels: realtimeuvLabel,
-            series: [
-                realtimeuvSeries
-            ]
-        };
-
-        optionsRealtimeuvChart = {
-            lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
-            }),
-            showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-            chartPadding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            }
-        };
-
-        var realtimeuv= new Chartist.Line('#RealTimeUltraVioletChart', dataRealtimeuvChart, optionsRealtimeuvChart);
-        md.startAnimationForLineChart(realtimeuv);
-
-        /* ----------==========     Realtime Indoor Temperature Chart initialization    ==========---------- */
-        var realtimeindoorTempLabelRef = [new Date()];
-        var realtimeindoorTempLabel = ['0s'];
-        var realtimeindoorTempSeries = [0];
-
-        realtimeAnalytics.createLiFo(realtimeindoorTempLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimeindoorTempLabel, 10);
-        realtimeAnalytics.createLiFo(realtimeindoorTempSeries, 10);
-
-        dataRealtimeindoorTempChart = {
-            labels: realtimeindoorTempLabel,
-            series: [
-                realtimeindoorTempSeries
-            ]
-        };
-
-        optionsRealtimeindoorTempChart = {
-            lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
-            }),
-            showArea: true,
-            low: -50,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-            chartPadding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            }
-        };
-
-        var realtimeindoorTemp = new Chartist.Line('#RealTimeIndoorTempChart', dataRealtimeindoorTempChart, optionsRealtimeindoorTempChart);
-        md.startAnimationForLineChart(realtimeindoorTemp);
-
-        /* ----------==========     Realtime Indoor Humidity Chart initialization    ==========---------- */
-        var realtimeindoorHumidLabelRef = [new Date()];
-        var realtimeindoorHumidLabel = ['0s'];
-        var realtimeindoorHumidSeries = [0];
-
-        realtimeAnalytics.createLiFo(realtimeindoorHumidLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimeindoorHumidLabel, 10);
-        realtimeAnalytics.createLiFo(realtimeindoorHumidSeries, 10);
-
-        dataRealtimeindoorHumidChart = {
-            labels: realtimeindoorHumidLabel,
-            series: [
-                realtimeindoorHumidSeries
-            ]
-        };
-
-        optionsRealtimeindoorHumidChart = {
-            lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
-            }),
-            showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-            chartPadding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            }
-        };
-
-        var realtimeindoorHumid = new Chartist.Line('#RealTimeIndoorHumidityChart', dataRealtimeindoorHumidChart, optionsRealtimeindoorHumidChart);
-        md.startAnimationForLineChart(realtimeindoorHumid);
-
-        /* ----------==========     Realtime baromin Chart initialization    ==========---------- */
-        var realtimebarominLabelRef = [new Date()];
-        var realtimebarominLabel = ['0s'];
-        var realtimebarominSeries = [0];
-
-        realtimeAnalytics.createLiFo(realtimebarominLabelRef, 10);
-        realtimeAnalytics.createLiFo(realtimebarominLabel, 10);
-        realtimeAnalytics.createLiFo(realtimebarominSeries, 10);
-
-        dataRealtimebarominChart = {
-            labels: realtimebarominLabel,
-            series: [
-                realtimebarominSeries
-            ]
-        };
-
-        optionsRealtimebarominChart = {
-            lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
-            }),
-            showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
-            chartPadding: {
-                top: 0,
-                right: 0,
-                bottom: 0,
-                left: 0
-            }
-        };
-
-        var realtimebaromin = new Chartist.Line('#RealTimeBarominChart', dataRealtimebarominChart, optionsRealtimebarominChart);
-        md.startAnimationForLineChart(realtimebaromin);
 
 
 
@@ -642,142 +362,78 @@ realtimeAnalytics = {
                     console.log('data');
                     var data = event.data;
                     var dataPoint = JSON.parse(data).event.payloadData;
-                    var temperature = dataPoint.tempf;
-                    temperature = ((temperature - 32) * 5) / 9;
-                    var humidity = dataPoint.humidity;
-                    var windDir=dataPoint.winddir;
-                    var dewptf=dataPoint.dewptf;
-                    dewptf = ((dewptf - 32) * 5) / 9;
-                    var windchillf=dataPoint.windchillf;
-                    windchillf = ((windchillf - 32) * 5) / 9;
-                    var windspeedmph=dataPoint.windspeedmph;
-                    var windgustmph=dataPoint.windgustmph;
-                    var rainin=dataPoint.rainin;
-                    var dailyrainin=dataPoint.dailyrainin;
-                    var weeklyrainin=dataPoint.weeklyrainin;
-                    var monthlyrainin=dataPoint.monthlyrainin;
-                    var yearlyrainin=dataPoint.yearlyrainin;
-                    var solarradiation=dataPoint.solarradiation;
-                    var UV=dataPoint.UV;
-                    var indoortempf=dataPoint.indoortempf;
-                    indoortempf = ((indoortempf - 32) * 5) / 9;
-                    var indoorhumidity=dataPoint.indoorhumidity;
-                    var baromin=dataPoint.baromin;
+                    var varOne=dataPoint[typeParameter1];
+                    var varTwo=dataPoint[typeParameter2];
+                    var varThree=dataPoint[typeParameter3];
+                    var varFour=dataPoint[typeParameter4];
+                    var varFive=dataPoint[typeParameter5];
+                    var varSix=dataPoint[typeParameter6];
+                    var varSeven=dataPoint[typeParameter7];
+                    var varEight=dataPoint[typeParameter8];
+                    var varnine=dataPoint[typeParameter9];
+
 
                     var currentTime = new Date();
                     var sinceText = timeDifference(currentTime, new Date(dataPoint.timeStamp), false) + " ago";
-                    updateStatusCards(sinceText,temperature, humidity, windDir,windspeedmph);
+                    updateStatusCards(sinceText,varOne, varTwo, varThree,varFour);
 
-                    var lastUpdatedTime = realtimeTempLabelRef[realtimeTempLabelRef.length - 1];
+                    var lastUpdatedTime = realtimeChartOneLabelRef[realtimeChartOneLabelRef.length - 1];
                     var lastUpdatedText = "<i class=\"material-icons\">access_time</i> updated "+timeDifference(currentTime, lastUpdatedTime)+" ago";
 
-                    realtimeTempLabel.push('0s');
-                    realtimeTempLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimeTempLabel, realtimeTempLabelRef);
-                    realtimeTempSeries.push(temperature);
-                    $("#realtimeTempLastUpdated").html(lastUpdatedText);
+                    realtimeChartOneLabel.push('0s');
+                    realtimeChartOneLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimeChartOneLabel, realtimeChartOneLabelRef);
+                    realtimeChartOneSeries.push(varOne);
+                    $("#realtimeChartOneLastUpdated").html(lastUpdatedText);
 
-                    realtimeHumidLabel.push('0s');
-                    realtimeHumidLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimeHumidLabel, realtimeHumidLabelRef);
-                    realtimeHumidSeries.push(humidity);
-                    $("#realtimeHumidLastUpdated").html(lastUpdatedText);
+                    realtimeChartTwoLabel.push('0s');
+                    realtimeChartTwoLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimeChartTwoLabel, realtimeChartTwoLabelRef);
+                    realtimeChartTwoSeries.push(varTwo);
+                    $("#realtimeChartTwoLastUpdated").html(lastUpdatedText);
 
-                    realtimeWindDirLabel.push('0s');
-                    realtimeWindDirLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimeWindDirLabel, realtimeWindDirLabelRef);
-                    realtimeWindDirSeries.push(windDir);
-                    $("#realtimeWindDirLastUpdated").html(lastUpdatedText);
+                    realtimeChartThreeLabel.push('0s');
+                    realtimeChartThreeLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimeChartThreeLabel, realtimeChartThreeLabelRef);
+                    realtimeChartThreeSeries.push(varThree);
+                    $("#realtimeChartThreeLastUpdated").html(lastUpdatedText);
 
-                    realtimedewptfLabel.push('0s');
-                    realtimedewptfLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimedewptfLabel, realtimedewptfLabelRef);
-                    realtimedewptfSeries.push(dewptf);
-                    $("#realtimedewptfLastUpdated").html(lastUpdatedText);
+                    realtimeChartFourLabel.push('0s');
+                    realtimeChartFourLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimeChartFourLabel, realtimeChartFourLabelRef);
+                    realtimeChartFourSeries.push(varFour);
+                    $("#realtimeChartFourLastUpdated").html(lastUpdatedText);
 
-                    realtimewindchillfLabel.push('0s');
-                    realtimewindchillfLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimewindchillfLabel, realtimewindchillfLabelRef);
-                    realtimewindchillfSeries.push(windchillf);
-                    $("#realtimewindchillfLastUpdated").html(lastUpdatedText);
+                    realtimewChartFiveLabel.push('0s');
+                    realtimewChartFiveLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimewChartFiveLabel, realtimewChartFiveLabelRef);
+                    realtimewChartFiveSeries.push(varFive);
+                    $("#realtimewChartFiveLastUpdated").html(lastUpdatedText);
 
-                    realtimewindspeedmphLabel.push('0s');
-                    realtimewindspeedmphLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimewindspeedmphLabel, realtimewindspeedmphLabelRef);
-                    realtimewindspeedmphSeries.push(windspeedmph);
-                    $("#realtimewindspeedmphLastUpdated").html(lastUpdatedText);
+                    realtimeChartSixLabel.push('0s');
+                    realtimeChartSixLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimeChartSixLabel, realtimeChartSixLabelRef);
+                    realtimeChartSixSeries.push(varSix);
+                    $("#realtimeChartSixLastUpdated").html(lastUpdatedText);
 
-                    realtimewindgustmphLabel.push('0s');
-                    realtimewindgustmphLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimewindgustmphLabel, realtimewindgustmphLabelRef);
-                    realtimewindgustmphSeries.push(windgustmph);
-                    $("#realtimewindgustmphLastUpdated").html(lastUpdatedText);
+                    realtimeChartSevenLabel.push('0s');
+                    realtimeChartSevenLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimeChartSevenLabel, realtimeChartSevenLabelRef);
+                    realtimeChartSevenSeries.push(varSeven);
+                    $("#realtimeChartSevenLastUpdated").html(lastUpdatedText);
 
-                    realtimerainingLabel.push('0s');
-                    realtimerainingLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimerainingLabel, realtimerainingLabelRef);
-                    realtimerainingSeries.push(rainin);
-                    $("#realtimerainingLastUpdated").html(lastUpdatedText);
+                    realtimeChartEightLabel.push('0s');
+                    realtimeChartEightLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimeChartEightLabel, realtimeChartEightLabelRef);
+                    realtimeChartEightSeries.push(varEight);
+                    $("#realtimeChartEightLastUpdated").html(lastUpdatedText);
 
-                    realtimedailyrainingLabel.push('0s');
-                    realtimedailyrainingLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimedailyrainingLabel, realtimedailyrainingLabelRef);
-                    realtimedailyrainingSeries.push(dailyrainin);
-                    $("#realtimedailyrainingLastUpdated").html(lastUpdatedText);
+                    realtimeChartNineLabel.push('0s');
+                    realtimeChartNineLabelRef.push(currentTime);
+                    realtimeAnalytics.calcTimeDiff(realtimeChartNineLabel, realtimeChartNineLabelRef);
+                    realtimeChartNineSeries.push(varnine);
+                    $("#realtimeChartNineLastUpdated").html(lastUpdatedText);
 
-                    realtimeweeklyrainingLabel.push('0s');
-                    realtimeweeklyrainingLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimeweeklyrainingLabel, realtimeweeklyrainingLabelRef);
-                    realtimeweeklyrainingSeries.push(weeklyrainin);
-                    $("#realtimeweeklyrainingLastUpdated").html(lastUpdatedText);
-
-                    realtimemonthlyrainingLabel.push('0s');
-                    realtimemonthlyrainingLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimemonthlyrainingLabel, realtimemonthlyrainingLabelRef);
-                    realtimemonthlyrainingSeries.push(monthlyrainin);
-                    $("#realtimemonthlyrainingLastUpdated").html(lastUpdatedText);
-
-                    realtimeyearlyrainingLabel.push('0s');
-                    realtimeyearlyrainingLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimeyearlyrainingLabel, realtimeyearlyrainingLabelRef);
-                    realtimeyearlyrainingSeries.push(yearlyrainin);
-                    $("#realtimeyearlyrainingLastUpdated").html(lastUpdatedText);
-
-                    realtimesolarradiationLabel.push('0s');
-                    realtimesolarradiationLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimesolarradiationLabel, realtimesolarradiationLabelRef);
-                    realtimesolarradiationSeries.push(solarradiation);
-                    $("#realtimesolarradiationLastUpdated").html(lastUpdatedText);
-
-                    realtimeuvLabel.push('0s');
-                    realtimeuvLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimeuvLabel, realtimeuvLabelRef);
-                    realtimeuvSeries.push(UV);
-                    $("#realtimeuvLastUpdated").html(lastUpdatedText);
-
-                    realtimeindoorTempLabel.push('0s');
-                    realtimeindoorTempLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimeindoorTempLabel, realtimeindoorTempLabelRef);
-                    realtimeindoorTempSeries.push(indoortempf);
-                    $("#realtimeindoortempLastUpdated").html(lastUpdatedText);
-
-                    realtimeindoorHumidLabel.push('0s');
-                    realtimeindoorHumidLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimeindoorHumidLabel, realtimeindoorHumidLabelRef);
-                    realtimeindoorHumidSeries.push(indoorhumidity);
-                    $("#realtimeindoorhumidLastUpdated").html(lastUpdatedText);
-
-                    realtimebarominLabel.push('0s');
-                    realtimebarominLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimebarominLabel, realtimebarominLabelRef);
-                    realtimebarominSeries.push(baromin);
-                    $("#realtimebarominLastUpdated").html(lastUpdatedText);
-
-                    realtimewindgustmphLabel.push('0s');
-                    realtimewindgustmphLabelRef.push(currentTime);
-                    realtimeAnalytics.calcTimeDiff(realtimewindgustmphLabel, realtimewindgustmphLabelRef);
-                    realtimewindgustmphSeries.push(windgustmph);
-                    $("#realtimewindgustLastUpdated").html(lastUpdatedText);
                     updateGraphs();
                 };
 
@@ -796,24 +452,15 @@ realtimeAnalytics = {
         }
 
         function updateGraphs(){
-            realtimeTemp.update();
-            realtimeHumid.update();
-            realtimeWindDir.update();
-            realtimedewptf.update();
-            realtimewindchillf.update();
-            realtimewindspeedmph.update();
-            realtimewindgustmph.update();
-            realtimeraining.update();
-            realtimedailyraining.update();
-            realtimeweeklyraining.update();
-            realtimemonthlyraining.update();
-            realtimeyearlyraining.update();
-            realtimesolarradiation.update();
-            realtimeuv.update();
-            realtimeindoorTemp.update();
-            realtimeindoorHumid.update();
-            realtimebaromin.update();
-
+            realtimeChartOne.update();
+            realtimeChartTwo.update();
+            realtimeChartThree.update();
+            realtimeChartFour.update();
+            realtimeChartFive.update();
+            realtimeChartSix.update();
+            realtimeChartSeven.update();
+            realtimeChartEight.update();
+            realtimeChartNine.update();
         }
 
         function disconnect() {

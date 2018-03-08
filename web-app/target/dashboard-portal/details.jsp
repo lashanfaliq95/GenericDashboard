@@ -164,7 +164,9 @@
         <%@ include file="pages/details-page-Segments/navBar.jsp" %>
 
         <div class="content" style="padding-top: 2px;">
+            <div id="curtain" style="text-align: center;font-size: 20px;"><STRONG>Charts Loading...</STRONG></div>
             <div id="daterangebar" style="margin-left:35%;margin-top: -4px">
+
                 <div class="menubutton">
                     <h4 style="margin-top: -4px"><strong id="dateR" style=" font-size: 20px;">Date-range</strong></h4>
                 </div>
@@ -174,6 +176,7 @@
                                class="form-control"/></h4></div>
 
             </div>
+
             <div class="container-fluid">
                 <div class="tab-content">
                     <div id="realtime" class="tab-pane fade in active">
@@ -370,9 +373,15 @@
 
     });
 
+
+
     function datePickerCallback(startD, endD) {
+        chartsLoading();
         var eventsSuccess = function (data) {
+            console.log(data);
             var records = JSON.parse(data);
+            var count=records.count;
+            console.log(count);
             analyticsHistory.redrawGraphs(records);
         };
 

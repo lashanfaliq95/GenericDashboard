@@ -55,3 +55,16 @@ $("#menu-toggle").click(function (e) {
     setTimeout(analyticsHistory.updateGraphs, 250);
 });
 
+//to show a loading bar when charts are loading
+$('#curtain').hide();
+
+function chartsLoading(){
+    $('#daterangebar').hide();
+    $('#curtain').show();
+
+}
+function chartsLoaded() {
+    $('#curtain').hide();
+    $('#daterangebar').show();
+
+}

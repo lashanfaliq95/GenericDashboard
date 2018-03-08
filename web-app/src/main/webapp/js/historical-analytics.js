@@ -328,7 +328,8 @@ analyticsHistory= {
         var sumChartSeven=0;
         var sumChartEight=0;
         var sumChartNine=0;
-
+        var deviceCount=records.count;
+        console.log(deviceCount);
         if (events.count > 0) {
 
             var currentTime = new Date();
@@ -479,7 +480,7 @@ analyticsHistory= {
                     analyticsHistory.historicalChartEightLabel= ['0s'],
                 analyticsHistory.historicalChartEightSeries= [0],
                 analyticsHistory.historicalChartNineLabel= ['0s'],
-                analyticsHistory.historicalChartNineSeries= [0],
+                analyticsHistory.historicalChartNineSeries= [0]
 
 
             analyticsHistory.historicalChartOne.update({
@@ -538,8 +539,8 @@ analyticsHistory= {
             });
 
         }
-
-    },
+        chartsLoaded();
+    }
 
 
 

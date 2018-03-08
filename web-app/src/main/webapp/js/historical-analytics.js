@@ -63,9 +63,6 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
-            low: -50,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better
-                      // look
             chartPadding: {
                 top: 0,
                 right: 0,
@@ -91,9 +88,6 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better
-                      // look
             chartPadding: {
                 top: 0,
                 right: 0,
@@ -119,9 +113,6 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 360, // creative tim: we recommend you to set the high sa the biggest value + something for a better
-                      // look
             chartPadding: {
                 top: 0,
                 right: 0,
@@ -148,9 +139,6 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
-            low: -50,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better
-                      // look
             chartPadding: {
                 top: 0,
                 right: 0,
@@ -176,9 +164,6 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
-            low: -50,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better
-                      // look
             chartPadding: {
                 top: 0,
                 right: 0,
@@ -204,9 +189,6 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better
-                      // look
             chartPadding: {
                 top: 0,
                 right: 0,
@@ -232,9 +214,6 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better
-                      // look
             chartPadding: {
                 top: 0,
                 right: 0,
@@ -260,9 +239,6 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better
-                      // look
             chartPadding: {
                 top: 0,
                 right: 0,

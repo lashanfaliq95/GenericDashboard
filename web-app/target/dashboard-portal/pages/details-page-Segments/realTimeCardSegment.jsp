@@ -5,12 +5,12 @@
                 <i class="material-icons">brightness_low</i>
             </div>
             <div class="card-content">
-                <p class="category">Temperature</p>
-                <h3 class="title" id="temperature">Yet to be updated
+                <p class="category" id="cardtitle1"></p>
+                <h3 class="title" id="card1">Yet to be updated
                 </h3>
             </div>
             <div class="card-footer">
-                <div class="stats" id="temperature_status_alert">
+                <div class="stats" id="card1_alert">
                     <i class="material-icons">update</i> Just Updated
                 </div>
             </div>
@@ -22,11 +22,11 @@
                 <i class="material-icons">invert_colors</i>
             </div>
             <div class="card-content">
-                <p class="category">Humidity</p>
-                <h3 class="title" id="humidity">Yet to be updated</h3>
+                <p class="category" id="cardtitle2"></p>
+                <h3 class="title" id="card2">Yet to be updated</h3>
             </div>
             <div class="card-footer">
-                <div class="stats" id="humidity_status_alert">
+                <div class="stats" id="card2_alert">
                     <i class="material-icons">update</i> Just Updated
                 </div>
             </div>
@@ -38,11 +38,11 @@
                 <i class="material-icons">zoom_out_map</i>
             </div>
             <div class="card-content">
-                <p class="category">Wind Direction</p>
-                <h3 class="title" id="wind_status">Yet to be updated</h3>
+                <p class="category" id="cardtitle3"></p>
+                <h3 class="title" id="card3">Yet to be updated</h3>
             </div>
             <div class="card-footer">
-                <div class="stats" id="wind_status_alert">
+                <div class="stats" id="card3_alert">
                     <i class="material-icons">update</i> Just Updated
                 </div>
             </div>
@@ -54,11 +54,11 @@
                 <i class="material-icons">forward</i>
             </div>
             <div class="card-content">
-                <p class="category">Wind Speed</p>
-                <h3 class="title" id="windspeed_status">Yet to be updated</h3>
+                <p class="category" id="cardtitle4"></p>
+                <h3 class="title" id="card4">Yet to be updated</h3>
             </div>
             <div class="card-footer">
-                <div class="stats" id="windspeed_status_alert">
+                <div class="stats" id="card4_alert">
                     <i class="material-icons">update</i> Just Updated
                 </div>
             </div>

@@ -23,6 +23,8 @@ function redirect(ele) {
     $('.ct-chart').toggleClass('fillcontent');
     $('.ct-chart').toggleClass('setheight');
 
+    var histab=$("#historicalTab").hasClass('active');
+    if(histab)
     analyticsHistory.updateGraphs();
 
 }

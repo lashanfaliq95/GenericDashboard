@@ -82,7 +82,7 @@ realtimeAnalytics = {
                 top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -114,7 +114,7 @@ realtimeAnalytics = {
                 top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -143,10 +143,10 @@ realtimeAnalytics = {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -175,10 +175,10 @@ realtimeAnalytics = {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -207,10 +207,10 @@ realtimeAnalytics = {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -239,10 +239,10 @@ realtimeAnalytics = {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -271,10 +271,10 @@ realtimeAnalytics = {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -303,10 +303,10 @@ realtimeAnalytics = {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 

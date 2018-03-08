@@ -39,12 +39,10 @@ realtimeAnalytics = {
                 tension: 0
             }),
             showArea: true,
-            responsive:false,
+            responsive:true,
             maintainAspectRatio : false,
-            low: -50,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
                 left: 0
@@ -75,16 +73,16 @@ realtimeAnalytics = {
 
         optionsRealtimeChartTwoChart = {
             lineSmooth: Chartist.Interpolation.cardinal({
-                tension: 0
+                tension: 0.2
             }),
-            showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
+            showArea: false,
+            maintainAspectRatio : false,
+            responsive:false,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -112,13 +110,11 @@ realtimeAnalytics = {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 360, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -146,13 +142,11 @@ realtimeAnalytics = {
                 tension: 0
             }),
             showArea: true,
-            low: -50,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -180,13 +174,11 @@ realtimeAnalytics = {
                 tension: 0
             }),
             showArea: true,
-            low: -50,
-            high: 50, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -214,13 +206,11 @@ realtimeAnalytics = {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -248,13 +238,11 @@ realtimeAnalytics = {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -282,13 +270,11 @@ realtimeAnalytics = {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -316,13 +302,11 @@ realtimeAnalytics = {
                 tension: 0
             }),
             showArea: true,
-            low: 0,
-            high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 

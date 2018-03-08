@@ -64,10 +64,10 @@ analyticsHistory= {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -89,10 +89,10 @@ analyticsHistory= {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -114,10 +114,10 @@ analyticsHistory= {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -140,10 +140,10 @@ analyticsHistory= {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -165,10 +165,10 @@ analyticsHistory= {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -190,10 +190,10 @@ analyticsHistory= {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -215,10 +215,10 @@ analyticsHistory= {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -240,10 +240,10 @@ analyticsHistory= {
             }),
             showArea: true,
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -268,10 +268,10 @@ analyticsHistory= {
             high: 100, // creative tim: we recommend you to set the high sa the biggest value + something for a better
                       // look
             chartPadding: {
-                top: 0,
+                top: 20,
                 right: 0,
                 bottom: 0,
-                left: 0
+                left: 10
             }
         };
 
@@ -356,7 +356,7 @@ analyticsHistory= {
 
                 var sinceText = analyticsHistory.timeDifference(currentTime, new Date(record.timestamp));
                 var dataPoint=record.values;
-                var varOne = dataPoint[typepParameter1];
+                var varOne = dataPoint[typeParameter1];
                 var varTwo = dataPoint[typeParameter2];
                 var varThree=dataPoint[typeParameter3];
                 var varFour=dataPoint[typeParameter4];

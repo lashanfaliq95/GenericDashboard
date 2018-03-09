@@ -105,4 +105,16 @@ function precise_round(num, decimals) {
 }
 
 
+function upgradeFirmware() {
+    var url = $("#firmwareUrl").val();
+    console.log('firmware url: ' + url);
 
+
+}
+
+function uploadConfiguration() {
+    var executionPlan = $("#executionPlan").val();
+    console.log('exec plan : ' + executionPlan);
+
+
+}

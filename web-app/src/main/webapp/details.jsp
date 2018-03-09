@@ -150,10 +150,11 @@
                     </a>
                 </li>
             </ul>
+
             <%@ include file="pages/details-page-Segments/deviceDetailsCard.jsp" %>
             <%@ include file="pages/details-page-Segments/mapSegment.jsp" %>
 
-            <div style=" margin-top: 120px; margin-left: 100px;">
+            <div style=" position:absolute; bottom: 0;margin-left: 100px">
                 <%@ include file="pages/details-page-Segments/footerWSO2.jsp" %>
             </div>
         </div>
@@ -191,7 +192,7 @@
                 </div>
             </div>
         </div>
-
+        <%@ include file="pages/details-page-Segments/operationPopUpModals.jsp" %>
 
     </div>
 </div>
@@ -378,14 +379,12 @@
     function datePickerCallback(startD, endD) {
         chartsLoading();
         var eventsSuccess = function (data) {
-            console.log(data);
             var records = JSON.parse(data);
-
             analyticsHistory.redrawGraphs(records);
         };
 
         var index = 0;
-        var length = 50;
+        var length = 100;
 
         $.ajax({
             type: "POST",

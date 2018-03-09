@@ -63,6 +63,7 @@ analyticsHistory= {
                 tension: 0
             }),
             showArea: true,
+            showPoint: true,
             chartPadding: {
                 top: 20,
                 right: 0,
@@ -351,10 +352,11 @@ analyticsHistory= {
             analyticsHistory.historicalChartNineLabel.length = 0;
             analyticsHistory.historicalChartNineSeries.length = 0;
 
-            for (var i = events.records.length - 1; i >= 0; i--) {
-                var record= events.records[i];
 
-                var sinceText = analyticsHistory.timeDifference(currentTime, new Date(record.timestamp));
+            for (var i = events.records.length - 1; i >= 0; i--) {
+                console.log('point '+i);
+                var record= events.records[i];
+                var sinceText;
                 var dataPoint=record.values;
                 var varOne = dataPoint[typeParameter1];
                 var varTwo = dataPoint[typeParameter2];
@@ -420,33 +422,29 @@ analyticsHistory= {
                     $("#historicalChartNineLastUpdated").html("<span class=\"text-success\"><i class=\"fa fa-bolt\"></i> " + avgChartNine.toFixed(2) + " </span>average "+displayName9+units9);
 
                 }
+              sinceText=null;
+                if(i=== events.records.length - 1 || i===0 || i===Math.floor(events.records.length/2)){
+                    sinceText = analyticsHistory.timeDifference(currentTime, new Date(record.timestamp));
+                }
+                analyticsHistory.historicalChartOneSeries.push(varOne);
+                analyticsHistory.historicalChartTwoSeries.push(varTwo);
+                analyticsHistory.historicalChartThreeSeries.push(varThree);
+                analyticsHistory.historicalChartFourSeries.push(varFour);
+                analyticsHistory.historicalChartFiveSeries.push(varFive);
+                analyticsHistory.historicalChartSixSeries.push(varSix);
+                analyticsHistory.historicalChartSevenSeries.push(varSeven);
+                analyticsHistory.historicalChartEightSeries.push(varEight);
+                analyticsHistory.historicalChartNineSeries.push(varNine);
 
                 analyticsHistory.historicalChartOneLabel.push(sinceText);
-                analyticsHistory.historicalChartOneSeries.push(varOne);
-
                 analyticsHistory.historicalChartTwoLabel.push(sinceText);
-                analyticsHistory.historicalChartTwoSeries.push(varTwo);
-
                 analyticsHistory.historicalChartThreeLabel.push(sinceText);
-                analyticsHistory.historicalChartThreeSeries.push(varThree);
-
                 analyticsHistory.historicalChartFourLabel.push(sinceText);
-                analyticsHistory.historicalChartFourSeries.push(varFour);
-
                 analyticsHistory.historicalChartFiveLabel.push(sinceText);
-                analyticsHistory.historicalChartFiveSeries.push(varFive);
-
                 analyticsHistory.historicalChartSixLabel.push(sinceText);
-                analyticsHistory.historicalChartSixSeries.push(varSix);
-
                 analyticsHistory.historicalChartSevenLabel.push(sinceText);
-                analyticsHistory.historicalChartSevenSeries.push(varSeven);
-
                 analyticsHistory.historicalChartEightLabel.push(sinceText);
-                analyticsHistory.historicalChartEightSeries.push(varEight);
-
                 analyticsHistory.historicalChartNineLabel.push(sinceText);
-                analyticsHistory.historicalChartNineSeries.push(varNine);
 
 
                 analyticsHistory.historicalChartOne.update();
@@ -460,6 +458,7 @@ analyticsHistory= {
                 analyticsHistory.historicalChartNine.update();
 
             }
+
         } else {
             //if there is no records in this period display no records
                 analyticsHistory.historicalChartOneLabel= ['0s'],
@@ -479,7 +478,7 @@ analyticsHistory= {
                     analyticsHistory.historicalChartEightLabel= ['0s'],
                 analyticsHistory.historicalChartEightSeries= [0],
                 analyticsHistory.historicalChartNineLabel= ['0s'],
-                analyticsHistory.historicalChartNineSeries= [0],
+                analyticsHistory.historicalChartNineSeries= [0]
 
 
             analyticsHistory.historicalChartOne.update({
@@ -538,8 +537,8 @@ analyticsHistory= {
             });
 
         }
-
-    },
+        chartsLoaded();
+    }
 
 
 

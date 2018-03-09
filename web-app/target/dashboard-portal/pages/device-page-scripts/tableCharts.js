@@ -38,7 +38,6 @@ function initDashboardPageCharts(deviceId) {
         lineSmooth: Chartist.Interpolation.cardinal({
             tension: 0
         }),
-        showArea: true,
         // look
         chartPadding: {
             top: 20,
@@ -64,7 +63,6 @@ function initDashboardPageCharts(deviceId) {
         lineSmooth: Chartist.Interpolation.cardinal({
             tension: 0
         }),
-        showArea: true,
         // look
         chartPadding: {
             top: 20,
@@ -90,7 +88,6 @@ function initDashboardPageCharts(deviceId) {
         lineSmooth: Chartist.Interpolation.cardinal({
             tension: 0
         }),
-        showArea: true,
         // look
         chartPadding: {
             top: 20,
@@ -155,7 +152,6 @@ function redrawGraphs(events, deviceId) {
             var sinceText = timeDifference(currentTime, new Date(record.timestamp));
             var dataPoint = record.values;
             var parameter1 = dataPoint[typepParameter1];
-            parameter1 = ((parameter1 - 32) * 5) / 9;
             var parameter2 = dataPoint[typeParameter2];
             var parameter3 = dataPoint[typeParameter3];
 

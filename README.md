@@ -4,10 +4,10 @@ A generic dashboard which can be customised to work with any device type created
 
 ### Prerequisites
 
-Java SE 8u144
-Maven
-Apache Tomcat 
-WSO2 IOT server
+Java SE 8u144  
+Maven  
+Apache Tomcat   
+WSO2 IOT server  
 
 
 ### Creating a new device type

@@ -14,43 +14,44 @@ WSO2 IOT server
 
 First you need to start the WSO2 IoT Server’s broker, core, and analytics profile
 
-cd <IOTS_HOME>/bin 
+cd <IOTS_HOME>/bin   
 
-------Linux/Mac OS/Solaris ----------
-./broker.sh
-./iot-server.sh
-./analytics.sh
+------Linux/Mac OS/Solaris ----------  
+./broker.sh  
+./iot-server.sh  
+./analytics.sh  
   
------Windows-----------
-broker.bat
-iot-server.bat
-Analytics.bat
+-----Windows-----------  
+broker.bat  
+iot-server.bat  
+Analytics.bat  
 
-Now register a device type can be registerd following the below steps.
-1).First go to https://localhost:9443/devicemgt/
-2).Sign in to the WSO2 Device Management Console using admin as the username and admin as the password.
-3).Click  > DEVICE TYPE MANAGEMENT > CREATE DEVICE TYPE.
-4).Enter the details needed to create a new device type and click Add Device Type.
+Now register a device type can be registerd following the below steps.  
 
-### Building and Deploying the app without an ide
+1).First go to https://localhost:9443/devicemgt/  
+2).Sign in to the WSO2 Device Management Console using admin as the username and admin as the password.  
+3).Click  > DEVICE TYPE MANAGEMENT > CREATE DEVICE TYPE.  
+4).Enter the details needed to create a new device type and click Add Device Type.  
 
-1).Clone the samples-iots repository from https://github.com/wso2/samples-iots. 
-2).Then go to Samples-iots -> GenericDashboard.
-3).Then Build the web applicaiton using mvn clean install.
-4).Go to Samples-iots -> GenericDashboard -> web-app -> target and copy the dashboard-portal.war to apache-tomcat-8.5.23 -> webapps.
-5).Start the Tomcat server and confirm the startup by going to  http://localhost:8080/
-6).Then go to http://127.0.0.1:8080/dashboard-portal/ and login using admin as the username and admin as the password.
+### Building and Deploying the app without an ide  
+  
+1).Clone the samples-iots repository from https://github.com/wso2/samples-iots.   
+2).Then go to Samples-iots -> GenericDashboard.  
+3).Then Build the web applicaiton using mvn clean install.  
+4).Go to Samples-iots -> GenericDashboard -> web-app -> target and copy the dashboard-portal.war to apache-tomcat-8.5.23 -> webapps.  
+5).Start the Tomcat server and confirm the startup by going to  http://localhost:8080/  
+6).Then go to http://127.0.0.1:8080/dashboard-portal/ and login using admin as the username and admin as the password.  
 
+  
+## Building and Deploying the app with an ide  
+  
+1).Clone the weather station source code from https://github.com/wso2/samples-iots.   
+2).Now open the project using an ide. And go to edit configurations  and add a new configuration tomcat->local.  
+3).Next add artifact org.wso2.iot.dashboard.portal:war to the configuration.  
+4).Now run the project using the ide.  
+   
 
-## Building and Deploying the app with an ide
-
-1).Clone the weather station source code from https://github.com/wso2/samples-iots. 
-2).Now open the project using an ide. And go to edit configurations  and add a new configuration tomcat->local.
-3).Next add artifact org.wso2.iot.dashboard.portal:war to the configuration.
-4).Now run the project using the ide.
-
-
-## User guide
+## User guide  
 
 1).First enter username and password to login . 
 

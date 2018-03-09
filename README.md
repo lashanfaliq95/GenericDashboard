@@ -50,7 +50,65 @@ Now register a device type can be registerd following the below steps.
 3).Next add artifact org.wso2.iot.dashboard.portal:war to the configuration.  
 4).Now run the project using the ide.  
    
+## Setting up the web app to suit your device type  
 
+1). In the devices.jsp page you need to change the following variables according to your device type. An example is given below.  
+    
+    var deviceType="weatherStation";  // The exact name of your device type
+      
+    var typepParameter1="temperature";  // The exact name of the event attribute  you need to diplay  
+    var displayName1="Temperature";     // The name you wish to display the even attribute under  
+    var units1="&#8451";                // The units of the event attribute this is celcius in HTML unicode  
+    
+    var typeParameter2="humidity";     
+    var displayName2="Humidity";    
+    var units2="%";    
+  
+    var typeParameter3="winddir";    
+    var displayName3="Wind Direction";    
+    var units3="&#176";    
+      
+ 2). Next in the details.jsp page you need to change the following variables according to your device type. An example is given below.    
+    
+    var deviceType="weatherstation";  // The exact name of your device type  
+
+    var typepParameter1="temperature";  // The exact name of the event attribute  you need to diplay    
+    var displayName1="Temperature";     // The name you wish to display the even attribute under    
+    var units1="&#8451";                // The units of the event attribute this is celcius in HTML unicode    
+  
+    var typeParameter2="humidity";  
+    var displayName2="Humidity";  
+    var units2="%";  
+  
+    var typeParameter3="winddir";  
+    var displayName3="Wind Direction";  
+    var units3="&#176";  
+  
+    var typeParameter4="dewptf";  
+    var displayName4="Dew Point";  
+    var units4="&#8451";  
+  
+    var typeParameter5="windspeedmph";  
+    var displayName5="Wind Speed";  
+    var units5="<Strong> mph</Strong>";  
+  
+    var typeParameter6="rainin";  
+    var displayName6="Raining";  
+    var units6="&#176";  
+  
+    var typeParameter7="solarradiation";  
+    var displayName7="Solar Radiation";   
+    var units7="<Strong> mmpH</Strong>";  
+  
+    var typeParameter8="UV";  
+    var displayName8="Ultra Violet";  
+    var units8="<Strong> milliwatts</Strong>";  
+  
+    var typeParameter9="baromin";  
+    var displayName9="Baromin";  
+    var units9="<Strong> pascal</Strong>";  
+
+  
 ## User guide  
 
 1).First enter username and password to login . 

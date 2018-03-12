@@ -1,4 +1,4 @@
-package org.wso2.iot.weatherstation.portal;
+package org.wso2.iot.dashboard.portal;
 
 public class LoginException extends Exception {
     public LoginException(String message) {

@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.iot.weatherstation.portal;
+package org.wso2.iot.dashboard.portal;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;

@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.iot.weatherstation.portal;
+package org.wso2.iot.dashboard.portal;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -50,9 +50,6 @@ import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 import java.util.ArrayList;
 import java.util.Base64;
-
-import static org.wso2.iot.weatherstation.portal.LoginController.ADMIN_PASSWORD;
-import static org.wso2.iot.weatherstation.portal.LoginController.ADMIN_USERNAME;
 
 public class ConfigController extends HttpServlet {
     public static final String ATTR_ACCESS_TOKEN = "accessToken";
@@ -119,7 +116,7 @@ public class ConfigController extends HttpServlet {
                 tokenEndpoint.setHeader("Content-Type", ContentType.APPLICATION_FORM_URLENCODED.toString());
 
                 StringEntity tokenEPPayload = new StringEntity(
-                        "grant_type=password&username=" + ADMIN_USERNAME + "&password=" + ADMIN_PASSWORD +
+                        "grant_type=password&username=" + LoginController.ADMIN_USERNAME + "&password=" + LoginController.ADMIN_PASSWORD +
                                 "&scope=" + "device_locker_" + deviceId + " " + getServletContext().getInitParameter(ATTR_AGENT_APP_SCOPES_LIST),
                         ContentType.APPLICATION_FORM_URLENCODED);
 

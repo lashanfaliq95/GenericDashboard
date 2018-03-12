@@ -16,7 +16,7 @@
  * under the License.
  */
 
-package org.wso2.iot.weatherstation.portal;
+package org.wso2.iot.dashboard.portal;
 
 import org.apache.commons.logging.Log;
 import org.apache.commons.logging.LogFactory;
@@ -45,7 +45,7 @@ import java.security.KeyManagementException;
 import java.security.KeyStoreException;
 import java.security.NoSuchAlgorithmException;
 
-import static org.wso2.iot.weatherstation.portal.LoginController.*;
+import static org.wso2.iot.dashboard.portal.LoginController.*;
 
 public class InvokerController extends HttpServlet {
     private static final Log log = LogFactory.getLog(LoginController.class);

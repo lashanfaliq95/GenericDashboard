@@ -31,6 +31,7 @@
 <%@ page import="java.net.URISyntaxException" %>
 <%@ page import="java.net.URL" %>
 <%@ page import="java.util.Date" %>
+<%@ page import="org.wso2.iot.dashboard.portal.LoginController" %>
 <%@include file="includes/authenticate.jsp" %>
 <%
     String deviceType="weatherstation";

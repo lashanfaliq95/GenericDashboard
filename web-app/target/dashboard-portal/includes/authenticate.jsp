@@ -1,4 +1,4 @@
-<%@ page import="org.wso2.iot.weatherstation.portal.LoginController" %>
+<%@ page import="org.wso2.iot.dashboard.portal.LoginController" %>
 <%@ page import="java.net.URLEncoder" %>
 <%
     String requestUri = request.getRequestURI();

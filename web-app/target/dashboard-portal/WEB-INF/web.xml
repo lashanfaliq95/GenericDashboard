@@ -10,7 +10,7 @@
 
     <servlet>
         <servlet-name>LoginController</servlet-name>
-        <servlet-class>org.wso2.iot.weatherstation.portal.LoginController</servlet-class>
+        <servlet-class>org.wso2.iot.dashboard.portal.LoginController</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
@@ -20,7 +20,7 @@
 
     <servlet>
         <servlet-name>InvokerController</servlet-name>
-        <servlet-class>org.wso2.iot.weatherstation.portal.InvokerController</servlet-class>
+        <servlet-class>org.wso2.iot.dashboard.portal.InvokerController</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>
@@ -30,7 +30,7 @@
 
     <servlet>
         <servlet-name>ConfigController</servlet-name>
-        <servlet-class>org.wso2.iot.weatherstation.portal.ConfigController</servlet-class>
+        <servlet-class>org.wso2.iot.dashboard.portal.ConfigController</servlet-class>
         <load-on-startup>1</load-on-startup>
     </servlet>
     <servlet-mapping>

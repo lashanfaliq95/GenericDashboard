@@ -63,7 +63,7 @@ function getDevice(dev, index, lat, long) {
         type: "POST",
         url: "invoker/execute",
         data: {
-            "uri": "/events/last-known/"+deviceType+"/" + devicesTemp[index].deviceIdentifier + "?limit=-1",
+            "uri": "/events/last-known/"+deviceType+"/" + devicesTemp[index].deviceIdentifier + "?limit=5",
             "method": "get"
         },
         success: lastKnownSuccess

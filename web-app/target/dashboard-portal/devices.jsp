@@ -109,7 +109,7 @@
         crossorigin=""></script>
 <script type="text/javascript">
 
-    var deviceType="weatherstation";
+    var deviceType="smartlocker";
 
     var typepParameter1="tempf";
     var displayName1="Temperature";

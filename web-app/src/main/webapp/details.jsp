@@ -1,18 +1,4 @@
-<%--Copyright (c) 2018, WSO2 Inc. (http://www.wso2.org) All Rights Reserved.--%>
 
-<%--WSO2 Inc. licenses this file to you under the Apache License,--%>
-<%--Version 2.0 (the "License"); you may not use this file except--%>
-<%--in compliance with the License.--%>
-<%--You may obtain a copy of the License at--%>
-
-<%--http://www.apache.org/licenses/LICENSE-2.0--%>
-
-<%--Unless required by applicable law or agreed to in writing,--%>
-<%--software distributed under the License is distributed on an--%>
-<%--"AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY--%>
-<%--KIND, either express or implied. See the License for the--%>
-<%--specific language governing permissions and limitations--%>
-<%--under the License.--%>
 
 
 <%@page import="org.apache.http.HttpResponse" %>
@@ -34,12 +20,13 @@
 <%@ page import="org.wso2.iot.dashboard.portal.LoginController" %>
 <%@include file="includes/authenticate.jsp" %>
 <%
-    String deviceType="weatherstation";
+    String deviceType="smartlocker";
     String id = request.getParameter("id");
     if (id == null) {
         //  response.sendRedirect("devices.jsp");
         return;
     }
+    
 
     String cookie = request.getHeader("Cookie");
 
@@ -118,7 +105,7 @@
           crossorigin=""/>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <link href="css/updates.css" rel="stylesheet"/>
-
+    <link rel="stylesheet" type="text/css" href="css/epoch.min.css">
     <link href="css/simple-sidebar.css" rel="stylesheet">
 </head>
 
@@ -184,6 +171,7 @@
                     <div id="realtime" class="tab-pane fade in active">
                         <%@ include file="pages/details-page-Segments/realTimeCardSegment.jsp" %>
                         <%@ include file="pages/details-page-Segments/realTimeChartSegment.jsp" %>
+                        <div id="lineChart" style="width: 800px; height: 200px"></div>
                     </div>
                     <div id="historical" class="tab-pane fade">
                         <%@ include file="pages/details-page-Segments/historicalChartsegment.jsp" %>
@@ -219,10 +207,17 @@
 <script src="js/historical-analytics.js"></script>
 <script src="pages/details-page-scripts/functions.js"></script>
 <script src="pages/details-page-scripts/cssFunctions.js"></script>
+<script src="js/d3.v3.min.js"></script>
+<script src="js/epoch.min.js"></script>
 <script type="text/javascript">
     var lastKnown = {};
+    $('#lineChart').epoch({
+        type: 'time.line',
+        data: []
+    });
 
-    var deviceType="weatherstation";
+    var deviceType="{\"occupancy\":"+occ+",\"metal\":"+met+",\"temperature\":"+temp+",\"humidity\":"+humidity+",\"open\":"+op+"}";
+
 
     var typeParameter1="tempf";
     var displayName1="Temperature";
@@ -284,8 +279,6 @@
     document.getElementById("cardtitle2").innerHTML = displayName2;
     document.getElementById("cardtitle3").innerHTML = displayName3;
     document.getElementById("cardtitle4").innerHTML = displayName4;
-
-
 
 
     $(document).ready(function () {
@@ -399,6 +392,7 @@
             success: eventsSuccess
         });
     }
+
 
 </script>
 

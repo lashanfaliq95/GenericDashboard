@@ -16,6 +16,7 @@ legend.onAdd = function (map) {
     return div;
 };
 legend.addTo(mymap);
+var markers = L.markerClusterGroup();
 
 
 //add devices to map as popups
@@ -34,5 +35,6 @@ function addToMapPopoup(lat, long, devName, devId, parameter1, parameter2, param
     popup = new L.Popup({maxWidth: "auto", autoPan: false, closeButton: false, closeOnClick: false});
     popup.setLatLng(popupLocation);
     popup.setContent(popupContent);
-    mymap.addLayer(popup);
+    markers.addLayer(popup);
+    mymap.addLayer(markers);
 }

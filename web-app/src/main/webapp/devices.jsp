@@ -26,6 +26,8 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet@1.2.0/dist/leaflet.css"
           integrity="sha512-M2wvCLH6DSRazYeZRIm1JnYyh22purTM+FDB5CsyxtQJYeKq83arPe5wgbNmcFXGqiSH2XR8dT/fJISVA1r/zQ=="
           crossorigin=""/>
+    <link href="css/MarkerCluster.css" rel="stylesheet">
+    <link href="css/MarkerCluster.Default.css" rel="stylesheet">
     <link href="css/updates.css" rel="stylesheet"/>
 
 </head>
@@ -107,9 +109,10 @@
 <script src="https://unpkg.com/leaflet@1.2.0/dist/leaflet.js"
         integrity="sha512-lInM/apFSqyy1o6s89K4iQUKg6ppXEgsVxT35HbzUupEVRh2Eu9Wdl4tHj7dZO0s1uvplcYGmt3498TtHq+log=="
         crossorigin=""></script>
+<script src="js/leaflet.markercluster.js" type="text/javascript"></script>
 <script type="text/javascript">
 
-    var deviceType="weatherstation";
+    var deviceType="smartlocker";
 
     var typepParameter1="tempf";
     var displayName1="Temperature";
